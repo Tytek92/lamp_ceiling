@@ -1,0 +1,1985 @@
+EESchema Schematic File Version 4
+LIBS:DC_load-cache
+EELAYER 26 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B8EDC40
+P 800 1800
+F 0 "J?" H 720 1475 50  0000 C CNN
+F 1 "LED_supply" V 1050 1750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 1800 50  0001 C CNN
+F 3 "~" H 800 1800 50  0001 C CNN
+	1    800  1800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B8EDD66
+P 800 2200
+F 0 "J?" H 720 1875 50  0000 C CNN
+F 1 "LED1_NTC" V 950 2150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 2200 50  0001 C CNN
+F 3 "~" H 800 2200 50  0001 C CNN
+	1    800  2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B8EDF30
+P 2050 1800
+F 0 "R?" V 1950 1800 50  0000 C CNN
+F 1 "1R, 0.25W, 1%" V 2150 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1980 1800 50  0001 C CNN
+F 3 "1206S4F100KT5E" H 2050 1800 50  0001 C CNN
+	1    2050 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5B8EE02B
+P 1050 1600
+F 0 "#PWR?" H 1050 1450 50  0001 C CNN
+F 1 "+12V" H 1065 1773 50  0000 C CNN
+F 2 "" H 1050 1600 50  0001 C CNN
+F 3 "" H 1050 1600 50  0001 C CNN
+	1    1050 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1700 1050 1700
+Wire Wire Line
+	1050 1700 1050 1600
+Wire Wire Line
+	1000 1800 1400 1800
+Text Notes 700  1350 0    50   ~ 0
+5W led\nImax = 0.416A
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B8EE4F6
+P 2500 1900
+F 0 "#PWR?" H 2500 1700 50  0001 C CNN
+F 1 "GNDPWR" H 2504 1746 50  0000 C CNN
+F 2 "" H 2500 1850 50  0001 C CNN
+F 3 "" H 2500 1850 50  0001 C CNN
+	1    2500 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1900 2500 1800
+Wire Wire Line
+	2300 1800 2250 1800
+$Comp
+L Device:R_Small R?
+U 1 1 5B8EE686
+P 2400 1800
+F 0 "R?" V 2204 1800 50  0000 C CNN
+F 1 "0R" V 2295 1800 50  0000 C CNN
+F 2 "" H 2400 1800 50  0001 C CNN
+F 3 "~" H 2400 1800 50  0001 C CNN
+	1    2400 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 1800 1850 1800
+Connection ~ 1850 1800
+Wire Wire Line
+	1850 1800 1900 1800
+Wire Wire Line
+	2250 1800 2250 1500
+Wire Wire Line
+	2250 1800 2200 1800
+$Comp
+L Analog_ADC:MCP3208 U?
+U 1 1 5B8EF272
+P 7050 6900
+F 0 "U?" H 7050 7578 50  0000 C CNN
+F 1 "MCP3208" H 7050 7487 50  0000 C CNN
+F 2 "" H 7150 7000 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21298c.pdf" H 7150 7000 50  0001 C CNN
+	1    7050 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM32F0:STM32F030R8Tx U?
+U 1 1 5B89D82F
+P 13000 4300
+F 0 "U?" H 13000 2414 50  0000 C CNN
+F 1 "STM32F030R8Tx" H 13000 2323 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 12500 2600 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 13000 4300 50  0001 C CNN
+	1    13000 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LMV321 U?
+U 1 1 5B8C9FC4
+P 3150 1400
+F 0 "U?" H 3100 1550 50  0000 L CNN
+F 1 "LMV321IDBVR" H 3050 1200 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3150 1400 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 1400 50  0001 C CNN
+	1    3150 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5B8CA40F
+P 3050 2000
+F 0 "R?" V 3246 2000 50  0000 C CNN
+F 1 "100k, 1%" V 3155 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3050 2000 50  0001 C CNN
+F 3 "~" H 3050 2000 50  0001 C CNN
+	1    3050 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B8CA677
+P 3050 1750
+F 0 "#PWR?" H 3050 1500 50  0001 C CNN
+F 1 "GND" H 3055 1577 50  0000 C CNN
+F 2 "" H 3050 1750 50  0001 C CNN
+F 3 "" H 3050 1750 50  0001 C CNN
+	1    3050 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1750 3050 1700
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B8CCDAE
+P 3050 950
+F 0 "#PWR?" H 3050 800 50  0001 C CNN
+F 1 "+3V3" H 3065 1123 50  0000 C CNN
+F 2 "" H 3050 950 50  0001 C CNN
+F 3 "" H 3050 950 50  0001 C CNN
+	1    3050 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2000 3600 2000
+Wire Wire Line
+	3600 2000 3600 1400
+Wire Wire Line
+	3600 1400 3450 1400
+Wire Wire Line
+	2750 1500 2850 1500
+Wire Wire Line
+	2750 1500 2750 2000
+Wire Wire Line
+	2750 2000 2950 2000
+$Comp
+L Device:R_Small R?
+U 1 1 5B8D6D0E
+P 2550 1500
+F 0 "R?" V 2746 1500 50  0000 C CNN
+F 1 "20k, 1%" V 2655 1500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 1500 50  0001 C CNN
+F 3 "~" H 2550 1500 50  0001 C CNN
+	1    2550 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 1500 2750 1500
+Connection ~ 2750 1500
+$Comp
+L Device:R_Small R?
+U 1 1 5B8DC2C4
+P 2550 1300
+F 0 "R?" V 2746 1300 50  0000 C CNN
+F 1 "20k, 1%" V 2655 1300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 1300 50  0001 C CNN
+F 3 "~" H 2550 1300 50  0001 C CNN
+	1    2550 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 1300 2750 1300
+$Comp
+L Device:R_Small R?
+U 1 1 5B8E20D9
+P 3600 1050
+F 0 "R?" V 3796 1050 50  0000 C CNN
+F 1 "100k, 1%" V 3705 1050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3600 1050 50  0001 C CNN
+F 3 "~" H 3600 1050 50  0001 C CNN
+	1    3600 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 1050 3750 1050
+Wire Wire Line
+	3750 1050 3750 1200
+$Comp
+L power:GND #PWR?
+U 1 1 5B8E50CE
+P 3750 1200
+F 0 "#PWR?" H 3750 950 50  0001 C CNN
+F 1 "GND" H 3755 1027 50  0000 C CNN
+F 2 "" H 3750 1200 50  0001 C CNN
+F 3 "" H 3750 1200 50  0001 C CNN
+	1    3750 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 950  3050 1100
+Wire Wire Line
+	2750 1050 2750 1300
+Connection ~ 2750 1300
+Wire Wire Line
+	2750 1300 2850 1300
+Wire Wire Line
+	2750 1050 3500 1050
+$Comp
+L Device:C_Small C?
+U 1 1 5B9146F7
+P 3700 1800
+F 0 "C?" H 3792 1846 50  0000 L CNN
+F 1 "100nF" H 3792 1755 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3700 1800 50  0001 C CNN
+F 3 "~" H 3700 1800 50  0001 C CNN
+	1    3700 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B914779
+P 3700 1950
+F 0 "#PWR?" H 3700 1700 50  0001 C CNN
+F 1 "GND" H 3705 1777 50  0000 C CNN
+F 2 "" H 3700 1950 50  0001 C CNN
+F 3 "" H 3700 1950 50  0001 C CNN
+	1    3700 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B9147C6
+P 3700 1650
+F 0 "#PWR?" H 3700 1500 50  0001 C CNN
+F 1 "+3V3" H 3715 1823 50  0000 C CNN
+F 2 "" H 3700 1650 50  0001 C CNN
+F 3 "" H 3700 1650 50  0001 C CNN
+	1    3700 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 1650 3700 1700
+Wire Wire Line
+	3700 1900 3700 1950
+Wire Wire Line
+	2250 1500 2450 1500
+Wire Wire Line
+	1850 1300 1850 1800
+Wire Wire Line
+	1850 1300 2450 1300
+Connection ~ 2250 1800
+Wire Wire Line
+	3600 1400 4050 1400
+Connection ~ 3600 1400
+Text GLabel 4050 1400 2    50   Output ~ 0
+LED1_ADC
+Text Label 1850 1300 0    50   ~ 0
+LED1_R+
+Text Label 2100 1500 0    50   ~ 0
+LED1_R-
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B902BBE
+P 1050 2050
+F 0 "#PWR?" H 1050 1900 50  0001 C CNN
+F 1 "+3V3" H 1065 2223 50  0000 C CNN
+F 2 "" H 1050 2050 50  0001 C CNN
+F 3 "" H 1050 2050 50  0001 C CNN
+	1    1050 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2050 1050 2100
+Wire Wire Line
+	1050 2100 1000 2100
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5B903741
+P 800 2600
+F 0 "J?" H 720 2275 50  0000 C CNN
+F 1 "LED1_fan" V 1050 2600 50  0000 C CNN
+F 2 "" H 800 2600 50  0001 C CNN
+F 3 "~" H 800 2600 50  0001 C CNN
+	1    800  2600
+	-1   0    0    1   
+$EndComp
+Text Notes 650  1000 0    50   ~ 0
+DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
+Text GLabel 1800 2150 2    50   Input ~ 0
+LED1_PWM
+Wire Wire Line
+	1800 2150 1600 2150
+Wire Wire Line
+	1600 2150 1600 2100
+Text GLabel 1100 2200 2    50   Output ~ 0
+LED1_NTC
+Wire Wire Line
+	1100 2200 1000 2200
+Text GLabel 6250 6600 0    50   Input ~ 0
+LED1_ADC
+Wire Wire Line
+	6250 6600 6450 6600
+Text Notes 2600 2550 0    50   ~ 0
+diff amp to single ADC\nR2/R1 = R4/R3, where R2/R1 = gain = 5\nUsh_max = 450mV, Ush_max_gain = 2.25V\nUsh_1mA = 1mV, Ush_1mA_gain = 5mV
+Text GLabel 12050 5500 0    50   Output ~ 0
+LED1_PWM
+Wire Wire Line
+	1300 2700 1000 2700
+$Comp
+L power:+12V #PWR?
+U 1 1 5B908085
+P 1050 2450
+F 0 "#PWR?" H 1050 2300 50  0001 C CNN
+F 1 "+12V" H 1065 2623 50  0000 C CNN
+F 2 "" H 1050 2450 50  0001 C CNN
+F 3 "" H 1050 2450 50  0001 C CNN
+	1    1050 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 2600 1050 2600
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B908B0C
+P 1900 2750
+F 0 "#PWR?" H 1900 2550 50  0001 C CNN
+F 1 "GNDPWR" H 1904 2596 50  0000 C CNN
+F 2 "" H 1900 2700 50  0001 C CNN
+F 3 "" H 1900 2700 50  0001 C CNN
+	1    1900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2750 1900 2700
+Wire Wire Line
+	1900 2700 1700 2700
+Text GLabel 1550 3050 2    50   Input ~ 0
+LED_FAN_PWM
+Wire Wire Line
+	1550 3050 1500 3050
+Wire Wire Line
+	1500 3050 1500 3000
+Text Notes 3150 1950 0    50   ~ 0
+R2
+Text Notes 2650 1600 0    50   ~ 0
+R1\n
+Text Notes 3400 1150 0    50   ~ 0
+R4
+Text Notes 2650 1300 0    50   ~ 0
+R3
+Wire Wire Line
+	1050 2450 1050 2600
+Text Notes 6450 6150 0    50   ~ 0
+Vref = 2.5V\n12bit res => 4095 samples\n1 sample => 0,000610501V => 0.6mV => 600uV\nUsh_450mA_gain = 2.25V => 3685,49 samples\nUsh_1mA_gain = 5mV => 8.3 samples\n#################################\nin turn, 2.5V = 500mA\n
+Text Notes 12350 2050 0    50   ~ 0
+Peripheral requirements:\n- led mos drive = 5 PWM\n- led fan drive = 1 PWM (one for all LED_FAN - hottest led sets spin speed)\n- NTC read = 5 ADC\n- ADC comms = 1 SPI\n- Remote control comms = 1 USART
+Text Notes 2100 3100 0    50   ~ 0
+One PWM for all LED_FAN
+Text GLabel 12050 5400 0    50   Input ~ 0
+LED1_NTC
+Text GLabel 12050 5300 0    50   Input ~ 0
+LED2_NTC
+Text GLabel 12050 5200 0    50   Input ~ 0
+LED3_NTC
+Text GLabel 12050 5100 0    50   Input ~ 0
+LED4_NTC
+Text GLabel 12050 5000 0    50   Input ~ 0
+LED5_NTC
+Text GLabel 12050 5600 0    50   Output ~ 0
+LED2_PWM
+Text GLabel 12050 5700 0    50   Output ~ 0
+LED3_PWM
+Text GLabel 12050 5800 0    50   Output ~ 0
+LED4_PWM
+Text GLabel 12050 5900 0    50   Output ~ 0
+LED5_PWM
+Text GLabel 12050 4900 0    50   Output ~ 0
+LED_FAN_PWM
+Wire Notes Line
+	500  500  500  3150
+Wire Notes Line
+	500  3150 4500 3150
+Wire Notes Line
+	4500 3150 4500 500 
+Wire Notes Line
+	4500 500  500  500 
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B91706B
+P 800 4500
+F 0 "J?" H 720 4175 50  0000 C CNN
+F 1 "LED_supply" V 1050 4450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 4500 50  0001 C CNN
+F 3 "~" H 800 4500 50  0001 C CNN
+	1    800  4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B917071
+P 800 4900
+F 0 "J?" H 720 4575 50  0000 C CNN
+F 1 "LED1_NTC" V 950 4850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 4900 50  0001 C CNN
+F 3 "~" H 800 4900 50  0001 C CNN
+	1    800  4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5B91707D
+P 1050 4300
+F 0 "#PWR?" H 1050 4150 50  0001 C CNN
+F 1 "+12V" H 1065 4473 50  0000 C CNN
+F 2 "" H 1050 4300 50  0001 C CNN
+F 3 "" H 1050 4300 50  0001 C CNN
+	1    1050 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 4400 1050 4400
+Wire Wire Line
+	1050 4400 1050 4300
+Wire Wire Line
+	1000 4500 1400 4500
+Text Notes 700  4050 0    50   ~ 0
+5W led\nImax = 0.416A
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B917087
+P 2500 4600
+F 0 "#PWR?" H 2500 4400 50  0001 C CNN
+F 1 "GNDPWR" H 2504 4446 50  0000 C CNN
+F 2 "" H 2500 4550 50  0001 C CNN
+F 3 "" H 2500 4550 50  0001 C CNN
+	1    2500 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4600 2500 4500
+Wire Wire Line
+	2300 4500 2250 4500
+$Comp
+L Device:R_Small R?
+U 1 1 5B91708F
+P 2400 4500
+F 0 "R?" V 2204 4500 50  0000 C CNN
+F 1 "0R" V 2295 4500 50  0000 C CNN
+F 2 "" H 2400 4500 50  0001 C CNN
+F 3 "~" H 2400 4500 50  0001 C CNN
+	1    2400 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 4500 1850 4500
+Connection ~ 1850 4500
+Wire Wire Line
+	1850 4500 1900 4500
+Wire Wire Line
+	2250 4500 2250 4200
+Wire Wire Line
+	2250 4500 2200 4500
+$Comp
+L Amplifier_Operational:LMV321 U?
+U 1 1 5B9170A0
+P 3150 4100
+F 0 "U?" H 3100 4250 50  0000 L CNN
+F 1 "LMV321IDBVR" H 3050 3900 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3150 4100 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 4100 50  0001 C CNN
+	1    3150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5B9170A6
+P 3050 4700
+F 0 "R?" V 2946 4700 50  0000 C CNN
+F 1 "100k, 1%" V 2855 4700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3050 4700 50  0001 C CNN
+F 3 "~" H 3050 4700 50  0001 C CNN
+	1    3050 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B9170AC
+P 3050 4450
+F 0 "#PWR?" H 3050 4200 50  0001 C CNN
+F 1 "GND" H 3055 4277 50  0000 C CNN
+F 2 "" H 3050 4450 50  0001 C CNN
+F 3 "" H 3050 4450 50  0001 C CNN
+	1    3050 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 4450 3050 4400
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B9170B3
+P 3050 3650
+F 0 "#PWR?" H 3050 3500 50  0001 C CNN
+F 1 "+3V3" H 3065 3823 50  0000 C CNN
+F 2 "" H 3050 3650 50  0001 C CNN
+F 3 "" H 3050 3650 50  0001 C CNN
+	1    3050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4700 3600 4700
+Wire Wire Line
+	3600 4700 3600 4100
+Wire Wire Line
+	3600 4100 3450 4100
+Wire Wire Line
+	2750 4200 2850 4200
+Wire Wire Line
+	2750 4200 2750 4700
+Wire Wire Line
+	2750 4700 2950 4700
+$Comp
+L Device:R_Small R?
+U 1 1 5B9170BF
+P 2550 4200
+F 0 "R?" V 2746 4200 50  0000 C CNN
+F 1 "20k, 1%" V 2655 4200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 4200 50  0001 C CNN
+F 3 "~" H 2550 4200 50  0001 C CNN
+	1    2550 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 4200 2750 4200
+Connection ~ 2750 4200
+$Comp
+L Device:R_Small R?
+U 1 1 5B9170C7
+P 2550 4000
+F 0 "R?" V 2746 4000 50  0000 C CNN
+F 1 "20k, 1%" V 2655 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 4000 50  0001 C CNN
+F 3 "~" H 2550 4000 50  0001 C CNN
+	1    2550 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 4000 2750 4000
+$Comp
+L Device:R_Small R?
+U 1 1 5B9170CE
+P 3600 3750
+F 0 "R?" V 3796 3750 50  0000 C CNN
+F 1 "100k, 1%" V 3705 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3600 3750 50  0001 C CNN
+F 3 "~" H 3600 3750 50  0001 C CNN
+	1    3600 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 3750 3750 3750
+Wire Wire Line
+	3750 3750 3750 3900
+$Comp
+L power:GND #PWR?
+U 1 1 5B9170D6
+P 3750 3900
+F 0 "#PWR?" H 3750 3650 50  0001 C CNN
+F 1 "GND" H 3755 3727 50  0000 C CNN
+F 2 "" H 3750 3900 50  0001 C CNN
+F 3 "" H 3750 3900 50  0001 C CNN
+	1    3750 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3650 3050 3800
+Wire Wire Line
+	2750 3750 2750 4000
+Connection ~ 2750 4000
+Wire Wire Line
+	2750 4000 2850 4000
+Wire Wire Line
+	2750 3750 3500 3750
+$Comp
+L Device:C_Small C?
+U 1 1 5B9170E1
+P 3700 4500
+F 0 "C?" H 3792 4546 50  0000 L CNN
+F 1 "100nF" H 3792 4455 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3700 4500 50  0001 C CNN
+F 3 "~" H 3700 4500 50  0001 C CNN
+	1    3700 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B9170E7
+P 3700 4650
+F 0 "#PWR?" H 3700 4400 50  0001 C CNN
+F 1 "GND" H 3705 4477 50  0000 C CNN
+F 2 "" H 3700 4650 50  0001 C CNN
+F 3 "" H 3700 4650 50  0001 C CNN
+	1    3700 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B9170ED
+P 3700 4350
+F 0 "#PWR?" H 3700 4200 50  0001 C CNN
+F 1 "+3V3" H 3715 4523 50  0000 C CNN
+F 2 "" H 3700 4350 50  0001 C CNN
+F 3 "" H 3700 4350 50  0001 C CNN
+	1    3700 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 4350 3700 4400
+Wire Wire Line
+	3700 4600 3700 4650
+Wire Wire Line
+	2250 4200 2450 4200
+Wire Wire Line
+	1850 4000 1850 4500
+Wire Wire Line
+	1850 4000 2450 4000
+Connection ~ 2250 4500
+Wire Wire Line
+	3600 4100 4050 4100
+Connection ~ 3600 4100
+Text GLabel 4050 4100 2    50   Output ~ 0
+LED2_ADC
+Text Label 1850 4000 0    50   ~ 0
+LED2_R+
+Text Label 2100 4200 0    50   ~ 0
+LED2_R-
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B9170FE
+P 1050 4750
+F 0 "#PWR?" H 1050 4600 50  0001 C CNN
+F 1 "+3V3" H 1065 4923 50  0000 C CNN
+F 2 "" H 1050 4750 50  0001 C CNN
+F 3 "" H 1050 4750 50  0001 C CNN
+	1    1050 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 4750 1050 4800
+Wire Wire Line
+	1050 4800 1000 4800
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5B917106
+P 800 5300
+F 0 "J?" H 720 4975 50  0000 C CNN
+F 1 "LED1_fan" V 1050 5300 50  0000 C CNN
+F 2 "" H 800 5300 50  0001 C CNN
+F 3 "~" H 800 5300 50  0001 C CNN
+	1    800  5300
+	-1   0    0    1   
+$EndComp
+Text Notes 650  3700 0    50   ~ 0
+DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
+Text GLabel 1800 4850 2    50   Input ~ 0
+LED2_PWM
+Wire Wire Line
+	1800 4850 1600 4850
+Wire Wire Line
+	1600 4850 1600 4800
+Text GLabel 1100 4900 2    50   Output ~ 0
+LED2_NTC
+Wire Wire Line
+	1100 4900 1000 4900
+Text Notes 2600 5250 0    50   ~ 0
+diff amp to single ADC\nR2/R1 = R4/R3, where R2/R1 = gain = 5\nUsh_max = 450mV, Ush_max_gain = 2.25V\nUsh_1mA = 1mV, Ush_1mA_gain = 5mV
+Wire Wire Line
+	1300 5400 1000 5400
+$Comp
+L power:+12V #PWR?
+U 1 1 5B91711A
+P 1050 5150
+F 0 "#PWR?" H 1050 5000 50  0001 C CNN
+F 1 "+12V" H 1065 5323 50  0000 C CNN
+F 2 "" H 1050 5150 50  0001 C CNN
+F 3 "" H 1050 5150 50  0001 C CNN
+	1    1050 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 5300 1050 5300
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B917121
+P 1900 5450
+F 0 "#PWR?" H 1900 5250 50  0001 C CNN
+F 1 "GNDPWR" H 1904 5296 50  0000 C CNN
+F 2 "" H 1900 5400 50  0001 C CNN
+F 3 "" H 1900 5400 50  0001 C CNN
+	1    1900 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 5450 1900 5400
+Wire Wire Line
+	1900 5400 1700 5400
+Text GLabel 1550 5750 2    50   Input ~ 0
+LED_FAN_PWM
+Wire Wire Line
+	1550 5750 1500 5750
+Wire Wire Line
+	1500 5750 1500 5700
+Text Notes 3150 4650 0    50   ~ 0
+R2
+Text Notes 2650 4300 0    50   ~ 0
+R1\n
+Text Notes 3400 3850 0    50   ~ 0
+R4
+Text Notes 2650 4000 0    50   ~ 0
+R3
+Wire Wire Line
+	1050 5150 1050 5300
+Text Notes 2100 5800 0    50   ~ 0
+One PWM for all LED_FAN
+Wire Notes Line
+	500  3200 500  5850
+Wire Notes Line
+	500  5850 4500 5850
+Wire Notes Line
+	4500 5850 4500 3200
+Wire Notes Line
+	4500 3200 500  3200
+Text Notes 4050 650  0    118  ~ 0
+LED1
+Text Notes 4050 3400 0    118  ~ 0
+LED2\n
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B919F3A
+P 800 7200
+F 0 "J?" H 720 6875 50  0000 C CNN
+F 1 "LED_supply" V 1050 7150 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 7200 50  0001 C CNN
+F 3 "~" H 800 7200 50  0001 C CNN
+	1    800  7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B919F40
+P 800 7600
+F 0 "J?" H 720 7275 50  0000 C CNN
+F 1 "LED1_NTC" V 950 7550 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 7600 50  0001 C CNN
+F 3 "~" H 800 7600 50  0001 C CNN
+	1    800  7600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5B919F4C
+P 1050 7000
+F 0 "#PWR?" H 1050 6850 50  0001 C CNN
+F 1 "+12V" H 1065 7173 50  0000 C CNN
+F 2 "" H 1050 7000 50  0001 C CNN
+F 3 "" H 1050 7000 50  0001 C CNN
+	1    1050 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 7100 1050 7100
+Wire Wire Line
+	1050 7100 1050 7000
+Wire Wire Line
+	1000 7200 1400 7200
+Text Notes 700  6750 0    50   ~ 0
+5W led\nImax = 0.416A
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B919F56
+P 2500 7300
+F 0 "#PWR?" H 2500 7100 50  0001 C CNN
+F 1 "GNDPWR" H 2504 7146 50  0000 C CNN
+F 2 "" H 2500 7250 50  0001 C CNN
+F 3 "" H 2500 7250 50  0001 C CNN
+	1    2500 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 7300 2500 7200
+Wire Wire Line
+	2300 7200 2250 7200
+$Comp
+L Device:R_Small R?
+U 1 1 5B919F5E
+P 2400 7200
+F 0 "R?" V 2204 7200 50  0000 C CNN
+F 1 "0R" V 2295 7200 50  0000 C CNN
+F 2 "" H 2400 7200 50  0001 C CNN
+F 3 "~" H 2400 7200 50  0001 C CNN
+	1    2400 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 7200 1850 7200
+Connection ~ 1850 7200
+Wire Wire Line
+	1850 7200 1900 7200
+Wire Wire Line
+	2250 7200 2250 6900
+Wire Wire Line
+	2250 7200 2200 7200
+$Comp
+L Amplifier_Operational:LMV321 U?
+U 1 1 5B919F6F
+P 3150 6800
+F 0 "U?" H 3100 6950 50  0000 L CNN
+F 1 "LMV321IDBVR" H 3050 6600 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3150 6800 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 6800 50  0001 C CNN
+	1    3150 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5B919F75
+P 3050 7400
+F 0 "R?" V 2946 7400 50  0000 C CNN
+F 1 "100k, 1%" V 2855 7400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3050 7400 50  0001 C CNN
+F 3 "~" H 3050 7400 50  0001 C CNN
+	1    3050 7400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B919F7B
+P 3050 7150
+F 0 "#PWR?" H 3050 6900 50  0001 C CNN
+F 1 "GND" H 3055 6977 50  0000 C CNN
+F 2 "" H 3050 7150 50  0001 C CNN
+F 3 "" H 3050 7150 50  0001 C CNN
+	1    3050 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 7150 3050 7100
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B919F82
+P 3050 6350
+F 0 "#PWR?" H 3050 6200 50  0001 C CNN
+F 1 "+3V3" H 3065 6523 50  0000 C CNN
+F 2 "" H 3050 6350 50  0001 C CNN
+F 3 "" H 3050 6350 50  0001 C CNN
+	1    3050 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 7400 3600 7400
+Wire Wire Line
+	3600 7400 3600 6800
+Wire Wire Line
+	3600 6800 3450 6800
+Wire Wire Line
+	2750 6900 2850 6900
+Wire Wire Line
+	2750 6900 2750 7400
+Wire Wire Line
+	2750 7400 2950 7400
+$Comp
+L Device:R_Small R?
+U 1 1 5B919F8E
+P 2550 6900
+F 0 "R?" V 2746 6900 50  0000 C CNN
+F 1 "20k, 1%" V 2655 6900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 6900 50  0001 C CNN
+F 3 "~" H 2550 6900 50  0001 C CNN
+	1    2550 6900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 6900 2750 6900
+Connection ~ 2750 6900
+$Comp
+L Device:R_Small R?
+U 1 1 5B919F96
+P 2550 6700
+F 0 "R?" V 2746 6700 50  0000 C CNN
+F 1 "20k, 1%" V 2655 6700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 6700 50  0001 C CNN
+F 3 "~" H 2550 6700 50  0001 C CNN
+	1    2550 6700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 6700 2750 6700
+$Comp
+L Device:R_Small R?
+U 1 1 5B919F9D
+P 3600 6450
+F 0 "R?" V 3796 6450 50  0000 C CNN
+F 1 "100k, 1%" V 3705 6450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3600 6450 50  0001 C CNN
+F 3 "~" H 3600 6450 50  0001 C CNN
+	1    3600 6450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 6450 3750 6450
+Wire Wire Line
+	3750 6450 3750 6600
+$Comp
+L power:GND #PWR?
+U 1 1 5B919FA5
+P 3750 6600
+F 0 "#PWR?" H 3750 6350 50  0001 C CNN
+F 1 "GND" H 3755 6427 50  0000 C CNN
+F 2 "" H 3750 6600 50  0001 C CNN
+F 3 "" H 3750 6600 50  0001 C CNN
+	1    3750 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 6350 3050 6500
+Wire Wire Line
+	2750 6450 2750 6700
+Connection ~ 2750 6700
+Wire Wire Line
+	2750 6700 2850 6700
+Wire Wire Line
+	2750 6450 3500 6450
+$Comp
+L Device:C_Small C?
+U 1 1 5B919FB0
+P 3700 7200
+F 0 "C?" H 3792 7246 50  0000 L CNN
+F 1 "100nF" H 3792 7155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3700 7200 50  0001 C CNN
+F 3 "~" H 3700 7200 50  0001 C CNN
+	1    3700 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B919FB6
+P 3700 7350
+F 0 "#PWR?" H 3700 7100 50  0001 C CNN
+F 1 "GND" H 3705 7177 50  0000 C CNN
+F 2 "" H 3700 7350 50  0001 C CNN
+F 3 "" H 3700 7350 50  0001 C CNN
+	1    3700 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B919FBC
+P 3700 7050
+F 0 "#PWR?" H 3700 6900 50  0001 C CNN
+F 1 "+3V3" H 3715 7223 50  0000 C CNN
+F 2 "" H 3700 7050 50  0001 C CNN
+F 3 "" H 3700 7050 50  0001 C CNN
+	1    3700 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 7050 3700 7100
+Wire Wire Line
+	3700 7300 3700 7350
+Wire Wire Line
+	2250 6900 2450 6900
+Wire Wire Line
+	1850 6700 1850 7200
+Wire Wire Line
+	1850 6700 2450 6700
+Connection ~ 2250 7200
+Wire Wire Line
+	3600 6800 4050 6800
+Connection ~ 3600 6800
+Text GLabel 4050 6800 2    50   Output ~ 0
+LED3_ADC
+Text Label 1850 6700 0    50   ~ 0
+LED3_R+
+Text Label 2100 6900 0    50   ~ 0
+LED3_R-
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B919FCD
+P 1050 7450
+F 0 "#PWR?" H 1050 7300 50  0001 C CNN
+F 1 "+3V3" H 1065 7623 50  0000 C CNN
+F 2 "" H 1050 7450 50  0001 C CNN
+F 3 "" H 1050 7450 50  0001 C CNN
+	1    1050 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 7450 1050 7500
+Wire Wire Line
+	1050 7500 1000 7500
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5B919FD5
+P 800 8000
+F 0 "J?" H 720 7675 50  0000 C CNN
+F 1 "LED1_fan" V 1050 8000 50  0000 C CNN
+F 2 "" H 800 8000 50  0001 C CNN
+F 3 "~" H 800 8000 50  0001 C CNN
+	1    800  8000
+	-1   0    0    1   
+$EndComp
+Text Notes 650  6400 0    50   ~ 0
+DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
+Text GLabel 1800 7550 2    50   Input ~ 0
+LED1_PWM
+Wire Wire Line
+	1800 7550 1600 7550
+Wire Wire Line
+	1600 7550 1600 7500
+Text GLabel 1100 7600 2    50   Output ~ 0
+LED3_NTC
+Wire Wire Line
+	1100 7600 1000 7600
+Text Notes 2600 7950 0    50   ~ 0
+diff amp to single ADC\nR2/R1 = R4/R3, where R2/R1 = gain = 5\nUsh_max = 450mV, Ush_max_gain = 2.25V\nUsh_1mA = 1mV, Ush_1mA_gain = 5mV
+Wire Wire Line
+	1300 8100 1000 8100
+$Comp
+L power:+12V #PWR?
+U 1 1 5B919FE9
+P 1050 7850
+F 0 "#PWR?" H 1050 7700 50  0001 C CNN
+F 1 "+12V" H 1065 8023 50  0000 C CNN
+F 2 "" H 1050 7850 50  0001 C CNN
+F 3 "" H 1050 7850 50  0001 C CNN
+	1    1050 7850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 8000 1050 8000
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B919FF0
+P 1900 8150
+F 0 "#PWR?" H 1900 7950 50  0001 C CNN
+F 1 "GNDPWR" H 1904 7996 50  0000 C CNN
+F 2 "" H 1900 8100 50  0001 C CNN
+F 3 "" H 1900 8100 50  0001 C CNN
+	1    1900 8150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 8150 1900 8100
+Wire Wire Line
+	1900 8100 1700 8100
+Text GLabel 1550 8450 2    50   Input ~ 0
+LED_FAN_PWM
+Wire Wire Line
+	1550 8450 1500 8450
+Wire Wire Line
+	1500 8450 1500 8400
+Text Notes 3150 7350 0    50   ~ 0
+R2
+Text Notes 2650 7000 0    50   ~ 0
+R1\n
+Text Notes 3400 6550 0    50   ~ 0
+R4
+Text Notes 2650 6700 0    50   ~ 0
+R3
+Wire Wire Line
+	1050 7850 1050 8000
+Text Notes 2100 8500 0    50   ~ 0
+One PWM for all LED_FAN
+Wire Notes Line
+	500  5900 500  8550
+Wire Notes Line
+	500  8550 4500 8550
+Wire Notes Line
+	4500 8550 4500 5900
+Wire Notes Line
+	4500 5900 500  5900
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B91A005
+P 800 9900
+F 0 "J?" H 720 9575 50  0000 C CNN
+F 1 "LED_supply" V 1050 9850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 9900 50  0001 C CNN
+F 3 "~" H 800 9900 50  0001 C CNN
+	1    800  9900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B91A00B
+P 800 10300
+F 0 "J?" H 720 9975 50  0000 C CNN
+F 1 "LED1_NTC" V 950 10250 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 800 10300 50  0001 C CNN
+F 3 "~" H 800 10300 50  0001 C CNN
+	1    800  10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5B91A017
+P 1050 9700
+F 0 "#PWR?" H 1050 9550 50  0001 C CNN
+F 1 "+12V" H 1065 9873 50  0000 C CNN
+F 2 "" H 1050 9700 50  0001 C CNN
+F 3 "" H 1050 9700 50  0001 C CNN
+	1    1050 9700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 9800 1050 9800
+Wire Wire Line
+	1050 9800 1050 9700
+Wire Wire Line
+	1000 9900 1400 9900
+Text Notes 700  9450 0    50   ~ 0
+5W led\nImax = 0.416A
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B91A021
+P 2500 10000
+F 0 "#PWR?" H 2500 9800 50  0001 C CNN
+F 1 "GNDPWR" H 2504 9846 50  0000 C CNN
+F 2 "" H 2500 9950 50  0001 C CNN
+F 3 "" H 2500 9950 50  0001 C CNN
+	1    2500 10000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 10000 2500 9900
+Wire Wire Line
+	2300 9900 2250 9900
+$Comp
+L Device:R_Small R?
+U 1 1 5B91A029
+P 2400 9900
+F 0 "R?" V 2204 9900 50  0000 C CNN
+F 1 "0R" V 2295 9900 50  0000 C CNN
+F 2 "" H 2400 9900 50  0001 C CNN
+F 3 "~" H 2400 9900 50  0001 C CNN
+	1    2400 9900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 9900 1850 9900
+Connection ~ 1850 9900
+Wire Wire Line
+	1850 9900 1900 9900
+Wire Wire Line
+	2250 9900 2250 9600
+Wire Wire Line
+	2250 9900 2200 9900
+$Comp
+L Amplifier_Operational:LMV321 U?
+U 1 1 5B91A03A
+P 3150 9500
+F 0 "U?" H 3100 9650 50  0000 L CNN
+F 1 "LMV321IDBVR" H 3050 9300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 3150 9500 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 9500 50  0001 C CNN
+	1    3150 9500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5B91A040
+P 3050 10100
+F 0 "R?" V 2946 10100 50  0000 C CNN
+F 1 "100k, 1%" V 2855 10100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3050 10100 50  0001 C CNN
+F 3 "~" H 3050 10100 50  0001 C CNN
+	1    3050 10100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B91A046
+P 3050 9850
+F 0 "#PWR?" H 3050 9600 50  0001 C CNN
+F 1 "GND" H 3055 9677 50  0000 C CNN
+F 2 "" H 3050 9850 50  0001 C CNN
+F 3 "" H 3050 9850 50  0001 C CNN
+	1    3050 9850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 9850 3050 9800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B91A04D
+P 3050 9050
+F 0 "#PWR?" H 3050 8900 50  0001 C CNN
+F 1 "+3V3" H 3065 9223 50  0000 C CNN
+F 2 "" H 3050 9050 50  0001 C CNN
+F 3 "" H 3050 9050 50  0001 C CNN
+	1    3050 9050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 10100 3600 10100
+Wire Wire Line
+	3600 10100 3600 9500
+Wire Wire Line
+	3600 9500 3450 9500
+Wire Wire Line
+	2750 9600 2850 9600
+Wire Wire Line
+	2750 9600 2750 10100
+Wire Wire Line
+	2750 10100 2950 10100
+$Comp
+L Device:R_Small R?
+U 1 1 5B91A059
+P 2550 9600
+F 0 "R?" V 2746 9600 50  0000 C CNN
+F 1 "20k, 1%" V 2655 9600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 9600 50  0001 C CNN
+F 3 "~" H 2550 9600 50  0001 C CNN
+	1    2550 9600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 9600 2750 9600
+Connection ~ 2750 9600
+$Comp
+L Device:R_Small R?
+U 1 1 5B91A061
+P 2550 9400
+F 0 "R?" V 2746 9400 50  0000 C CNN
+F 1 "20k, 1%" V 2655 9400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 2550 9400 50  0001 C CNN
+F 3 "~" H 2550 9400 50  0001 C CNN
+	1    2550 9400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2650 9400 2750 9400
+$Comp
+L Device:R_Small R?
+U 1 1 5B91A068
+P 3600 9150
+F 0 "R?" V 3796 9150 50  0000 C CNN
+F 1 "100k, 1%" V 3705 9150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 3600 9150 50  0001 C CNN
+F 3 "~" H 3600 9150 50  0001 C CNN
+	1    3600 9150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 9150 3750 9150
+Wire Wire Line
+	3750 9150 3750 9300
+$Comp
+L power:GND #PWR?
+U 1 1 5B91A070
+P 3750 9300
+F 0 "#PWR?" H 3750 9050 50  0001 C CNN
+F 1 "GND" H 3755 9127 50  0000 C CNN
+F 2 "" H 3750 9300 50  0001 C CNN
+F 3 "" H 3750 9300 50  0001 C CNN
+	1    3750 9300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 9050 3050 9200
+Wire Wire Line
+	2750 9150 2750 9400
+Connection ~ 2750 9400
+Wire Wire Line
+	2750 9400 2850 9400
+Wire Wire Line
+	2750 9150 3500 9150
+$Comp
+L Device:C_Small C?
+U 1 1 5B91A07B
+P 3700 9900
+F 0 "C?" H 3792 9946 50  0000 L CNN
+F 1 "100nF" H 3792 9855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3700 9900 50  0001 C CNN
+F 3 "~" H 3700 9900 50  0001 C CNN
+	1    3700 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B91A081
+P 3700 10050
+F 0 "#PWR?" H 3700 9800 50  0001 C CNN
+F 1 "GND" H 3705 9877 50  0000 C CNN
+F 2 "" H 3700 10050 50  0001 C CNN
+F 3 "" H 3700 10050 50  0001 C CNN
+	1    3700 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B91A087
+P 3700 9750
+F 0 "#PWR?" H 3700 9600 50  0001 C CNN
+F 1 "+3V3" H 3715 9923 50  0000 C CNN
+F 2 "" H 3700 9750 50  0001 C CNN
+F 3 "" H 3700 9750 50  0001 C CNN
+	1    3700 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 9750 3700 9800
+Wire Wire Line
+	3700 10000 3700 10050
+Wire Wire Line
+	2250 9600 2450 9600
+Wire Wire Line
+	1850 9400 1850 9900
+Wire Wire Line
+	1850 9400 2450 9400
+Connection ~ 2250 9900
+Wire Wire Line
+	3600 9500 4050 9500
+Connection ~ 3600 9500
+Text GLabel 4050 9500 2    50   Output ~ 0
+LED4_ADC
+Text Label 1850 9400 0    50   ~ 0
+LED4_R+
+Text Label 2100 9600 0    50   ~ 0
+LED4_R-
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B91A098
+P 1050 10150
+F 0 "#PWR?" H 1050 10000 50  0001 C CNN
+F 1 "+3V3" H 1065 10323 50  0000 C CNN
+F 2 "" H 1050 10150 50  0001 C CNN
+F 3 "" H 1050 10150 50  0001 C CNN
+	1    1050 10150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 10150 1050 10200
+Wire Wire Line
+	1050 10200 1000 10200
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5B91A0A0
+P 800 10700
+F 0 "J?" H 720 10375 50  0000 C CNN
+F 1 "LED1_fan" V 1050 10700 50  0000 C CNN
+F 2 "" H 800 10700 50  0001 C CNN
+F 3 "~" H 800 10700 50  0001 C CNN
+	1    800  10700
+	-1   0    0    1   
+$EndComp
+Text Notes 650  9100 0    50   ~ 0
+DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
+Text GLabel 1800 10250 2    50   Input ~ 0
+LED1_PWM
+Wire Wire Line
+	1800 10250 1600 10250
+Wire Wire Line
+	1600 10250 1600 10200
+Text GLabel 1100 10300 2    50   Output ~ 0
+LED4_NTC
+Wire Wire Line
+	1100 10300 1000 10300
+Text Notes 2600 10650 0    50   ~ 0
+diff amp to single ADC\nR2/R1 = R4/R3, where R2/R1 = gain = 5\nUsh_max = 450mV, Ush_max_gain = 2.25V\nUsh_1mA = 1mV, Ush_1mA_gain = 5mV
+Wire Wire Line
+	1300 10800 1000 10800
+$Comp
+L power:+12V #PWR?
+U 1 1 5B91A0B4
+P 1050 10550
+F 0 "#PWR?" H 1050 10400 50  0001 C CNN
+F 1 "+12V" H 1065 10723 50  0000 C CNN
+F 2 "" H 1050 10550 50  0001 C CNN
+F 3 "" H 1050 10550 50  0001 C CNN
+	1    1050 10550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 10700 1050 10700
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B91A0BB
+P 1900 10850
+F 0 "#PWR?" H 1900 10650 50  0001 C CNN
+F 1 "GNDPWR" H 1904 10696 50  0000 C CNN
+F 2 "" H 1900 10800 50  0001 C CNN
+F 3 "" H 1900 10800 50  0001 C CNN
+	1    1900 10850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 10850 1900 10800
+Wire Wire Line
+	1900 10800 1700 10800
+Text GLabel 1550 11150 2    50   Input ~ 0
+LED_FAN_PWM
+Wire Wire Line
+	1550 11150 1500 11150
+Wire Wire Line
+	1500 11150 1500 11100
+Text Notes 3150 10050 0    50   ~ 0
+R2
+Text Notes 2650 9700 0    50   ~ 0
+R1\n
+Text Notes 3400 9250 0    50   ~ 0
+R4
+Text Notes 2650 9400 0    50   ~ 0
+R3
+Wire Wire Line
+	1050 10550 1050 10700
+Text Notes 2100 11200 0    50   ~ 0
+One PWM for all LED_FAN
+Wire Notes Line
+	500  8600 500  11250
+Wire Notes Line
+	500  11250 4500 11250
+Wire Notes Line
+	4500 11250 4500 8600
+Wire Notes Line
+	4500 8600 500  8600
+Text Notes 4050 6050 0    118  ~ 0
+LED3\n
+Text Notes 4050 8800 0    118  ~ 0
+LED4
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B922C5D
+P 4850 9900
+F 0 "J?" H 4770 9575 50  0000 C CNN
+F 1 "LED_supply" V 5100 9850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4850 9900 50  0001 C CNN
+F 3 "~" H 4850 9900 50  0001 C CNN
+	1    4850 9900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5B922C63
+P 4850 10300
+F 0 "J?" H 4770 9975 50  0000 C CNN
+F 1 "LED1_NTC" V 5000 10250 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4850 10300 50  0001 C CNN
+F 3 "~" H 4850 10300 50  0001 C CNN
+	1    4850 10300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5B922C6F
+P 5100 9700
+F 0 "#PWR?" H 5100 9550 50  0001 C CNN
+F 1 "+12V" H 5115 9873 50  0000 C CNN
+F 2 "" H 5100 9700 50  0001 C CNN
+F 3 "" H 5100 9700 50  0001 C CNN
+	1    5100 9700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 9800 5100 9800
+Wire Wire Line
+	5100 9800 5100 9700
+Wire Wire Line
+	5050 9900 5450 9900
+Text Notes 4750 9450 0    50   ~ 0
+5W led\nImax = 0.416A
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B922C79
+P 6550 10000
+F 0 "#PWR?" H 6550 9800 50  0001 C CNN
+F 1 "GNDPWR" H 6554 9846 50  0000 C CNN
+F 2 "" H 6550 9950 50  0001 C CNN
+F 3 "" H 6550 9950 50  0001 C CNN
+	1    6550 10000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 10000 6550 9900
+Wire Wire Line
+	6350 9900 6300 9900
+$Comp
+L Device:R_Small R?
+U 1 1 5B922C81
+P 6450 9900
+F 0 "R?" V 6254 9900 50  0000 C CNN
+F 1 "0R" V 6345 9900 50  0000 C CNN
+F 2 "" H 6450 9900 50  0001 C CNN
+F 3 "~" H 6450 9900 50  0001 C CNN
+	1    6450 9900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 9900 5900 9900
+Connection ~ 5900 9900
+Wire Wire Line
+	5900 9900 5950 9900
+Wire Wire Line
+	6300 9900 6300 9600
+Wire Wire Line
+	6300 9900 6250 9900
+$Comp
+L Amplifier_Operational:LMV321 U?
+U 1 1 5B922C92
+P 7200 9500
+F 0 "U?" H 7150 9650 50  0000 L CNN
+F 1 "LMV321IDBVR" H 7100 9300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 7200 9500 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 7200 9500 50  0001 C CNN
+	1    7200 9500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5B922C98
+P 7100 10100
+F 0 "R?" V 6996 10100 50  0000 C CNN
+F 1 "100k, 1%" V 6905 10100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 7100 10100 50  0001 C CNN
+F 3 "~" H 7100 10100 50  0001 C CNN
+	1    7100 10100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B922C9E
+P 7100 9850
+F 0 "#PWR?" H 7100 9600 50  0001 C CNN
+F 1 "GND" H 7105 9677 50  0000 C CNN
+F 2 "" H 7100 9850 50  0001 C CNN
+F 3 "" H 7100 9850 50  0001 C CNN
+	1    7100 9850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 9850 7100 9800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B922CA5
+P 7100 9050
+F 0 "#PWR?" H 7100 8900 50  0001 C CNN
+F 1 "+3V3" H 7115 9223 50  0000 C CNN
+F 2 "" H 7100 9050 50  0001 C CNN
+F 3 "" H 7100 9050 50  0001 C CNN
+	1    7100 9050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 10100 7650 10100
+Wire Wire Line
+	7650 10100 7650 9500
+Wire Wire Line
+	7650 9500 7500 9500
+Wire Wire Line
+	6800 9600 6900 9600
+Wire Wire Line
+	6800 9600 6800 10100
+Wire Wire Line
+	6800 10100 7000 10100
+$Comp
+L Device:R_Small R?
+U 1 1 5B922CB1
+P 6600 9600
+F 0 "R?" V 6796 9600 50  0000 C CNN
+F 1 "20k, 1%" V 6705 9600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 6600 9600 50  0001 C CNN
+F 3 "~" H 6600 9600 50  0001 C CNN
+	1    6600 9600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 9600 6800 9600
+Connection ~ 6800 9600
+$Comp
+L Device:R_Small R?
+U 1 1 5B922CB9
+P 6600 9400
+F 0 "R?" V 6796 9400 50  0000 C CNN
+F 1 "20k, 1%" V 6705 9400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 6600 9400 50  0001 C CNN
+F 3 "~" H 6600 9400 50  0001 C CNN
+	1    6600 9400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6700 9400 6800 9400
+$Comp
+L Device:R_Small R?
+U 1 1 5B922CC0
+P 7650 9150
+F 0 "R?" V 7846 9150 50  0000 C CNN
+F 1 "100k, 1%" V 7755 9150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 7650 9150 50  0001 C CNN
+F 3 "~" H 7650 9150 50  0001 C CNN
+	1    7650 9150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7750 9150 7800 9150
+Wire Wire Line
+	7800 9150 7800 9300
+$Comp
+L power:GND #PWR?
+U 1 1 5B922CC8
+P 7800 9300
+F 0 "#PWR?" H 7800 9050 50  0001 C CNN
+F 1 "GND" H 7805 9127 50  0000 C CNN
+F 2 "" H 7800 9300 50  0001 C CNN
+F 3 "" H 7800 9300 50  0001 C CNN
+	1    7800 9300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 9050 7100 9200
+Wire Wire Line
+	6800 9150 6800 9400
+Connection ~ 6800 9400
+Wire Wire Line
+	6800 9400 6900 9400
+Wire Wire Line
+	6800 9150 7550 9150
+$Comp
+L Device:C_Small C?
+U 1 1 5B922CD3
+P 7750 9900
+F 0 "C?" H 7842 9946 50  0000 L CNN
+F 1 "100nF" H 7842 9855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7750 9900 50  0001 C CNN
+F 3 "~" H 7750 9900 50  0001 C CNN
+	1    7750 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B922CD9
+P 7750 10050
+F 0 "#PWR?" H 7750 9800 50  0001 C CNN
+F 1 "GND" H 7755 9877 50  0000 C CNN
+F 2 "" H 7750 10050 50  0001 C CNN
+F 3 "" H 7750 10050 50  0001 C CNN
+	1    7750 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B922CDF
+P 7750 9750
+F 0 "#PWR?" H 7750 9600 50  0001 C CNN
+F 1 "+3V3" H 7765 9923 50  0000 C CNN
+F 2 "" H 7750 9750 50  0001 C CNN
+F 3 "" H 7750 9750 50  0001 C CNN
+	1    7750 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 9750 7750 9800
+Wire Wire Line
+	7750 10000 7750 10050
+Wire Wire Line
+	6300 9600 6500 9600
+Wire Wire Line
+	5900 9400 5900 9900
+Wire Wire Line
+	5900 9400 6500 9400
+Connection ~ 6300 9900
+Wire Wire Line
+	7650 9500 8100 9500
+Connection ~ 7650 9500
+Text GLabel 8100 9500 2    50   Output ~ 0
+LED5_ADC
+Text Label 5900 9400 0    50   ~ 0
+LED5_R+
+Text Label 6150 9600 0    50   ~ 0
+LED5_R-
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5B922CF0
+P 5100 10150
+F 0 "#PWR?" H 5100 10000 50  0001 C CNN
+F 1 "+3V3" H 5115 10323 50  0000 C CNN
+F 2 "" H 5100 10150 50  0001 C CNN
+F 3 "" H 5100 10150 50  0001 C CNN
+	1    5100 10150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 10150 5100 10200
+Wire Wire Line
+	5100 10200 5050 10200
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5B922CF8
+P 4850 10700
+F 0 "J?" H 4770 10375 50  0000 C CNN
+F 1 "LED1_fan" V 5100 10700 50  0000 C CNN
+F 2 "" H 4850 10700 50  0001 C CNN
+F 3 "~" H 4850 10700 50  0001 C CNN
+	1    4850 10700
+	-1   0    0    1   
+$EndComp
+Text Notes 4700 9100 0    50   ~ 0
+DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
+Text GLabel 5850 10250 2    50   Input ~ 0
+LED5_PWM
+Wire Wire Line
+	5850 10250 5650 10250
+Wire Wire Line
+	5650 10250 5650 10200
+Text GLabel 5150 10300 2    50   Output ~ 0
+LED5_NTC
+Wire Wire Line
+	5150 10300 5050 10300
+Text Notes 6650 10650 0    50   ~ 0
+diff amp to single ADC\nR2/R1 = R4/R3, where R2/R1 = gain = 5\nUsh_max = 450mV, Ush_max_gain = 2.25V\nUsh_1mA = 1mV, Ush_1mA_gain = 5mV
+Wire Wire Line
+	5350 10800 5050 10800
+$Comp
+L power:+12V #PWR?
+U 1 1 5B922D0C
+P 5100 10550
+F 0 "#PWR?" H 5100 10400 50  0001 C CNN
+F 1 "+12V" H 5115 10723 50  0000 C CNN
+F 2 "" H 5100 10550 50  0001 C CNN
+F 3 "" H 5100 10550 50  0001 C CNN
+	1    5100 10550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 10700 5100 10700
+$Comp
+L power:GNDPWR #PWR?
+U 1 1 5B922D13
+P 5950 10850
+F 0 "#PWR?" H 5950 10650 50  0001 C CNN
+F 1 "GNDPWR" H 5954 10696 50  0000 C CNN
+F 2 "" H 5950 10800 50  0001 C CNN
+F 3 "" H 5950 10800 50  0001 C CNN
+	1    5950 10850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 10850 5950 10800
+Wire Wire Line
+	5950 10800 5750 10800
+Text GLabel 5600 11150 2    50   Input ~ 0
+LED_FAN_PWM
+Wire Wire Line
+	5600 11150 5550 11150
+Wire Wire Line
+	5550 11150 5550 11100
+Text Notes 7200 10050 0    50   ~ 0
+R2
+Text Notes 6700 9700 0    50   ~ 0
+R1\n
+Text Notes 7450 9250 0    50   ~ 0
+R4
+Text Notes 6700 9400 0    50   ~ 0
+R3
+Wire Wire Line
+	5100 10550 5100 10700
+Text Notes 6150 11200 0    50   ~ 0
+One PWM for all LED_FAN
+Wire Notes Line
+	4550 8600 4550 11250
+Wire Notes Line
+	4550 11250 8550 11250
+Wire Notes Line
+	8550 11250 8550 8600
+Wire Notes Line
+	8550 8600 4550 8600
+Text Notes 8100 8800 0    118  ~ 0
+LED5
+Text GLabel 6250 6700 0    50   Input ~ 0
+LED2_ADC
+Text GLabel 6250 6800 0    50   Input ~ 0
+LED3_ADC
+Text GLabel 6250 6900 0    50   Input ~ 0
+LED4_ADC
+Text GLabel 6250 7000 0    50   Input ~ 0
+LED5_ADC
+Wire Wire Line
+	6250 6700 6450 6700
+Wire Wire Line
+	6450 6800 6250 6800
+Wire Wire Line
+	6250 6900 6450 6900
+Wire Wire Line
+	6450 7000 6250 7000
+$Comp
+L Device:R R?
+U 1 1 5B984CE1
+P 2050 4500
+F 0 "R?" V 1950 4500 50  0000 C CNN
+F 1 "1R, 0.25W, 1%" V 2150 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1980 4500 50  0001 C CNN
+F 3 "1206S4F100KT5E" H 2050 4500 50  0001 C CNN
+	1    2050 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B984D8F
+P 2050 7200
+F 0 "R?" V 1950 7200 50  0000 C CNN
+F 1 "1R, 0.25W, 1%" V 2150 7200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1980 7200 50  0001 C CNN
+F 3 "1206S4F100KT5E" H 2050 7200 50  0001 C CNN
+	1    2050 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B984F65
+P 2050 9900
+F 0 "R?" V 1950 9900 50  0000 C CNN
+F 1 "1R, 0.25W, 1%" V 2150 9900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1980 9900 50  0001 C CNN
+F 3 "1206S4F100KT5E" H 2050 9900 50  0001 C CNN
+	1    2050 9900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B9850FD
+P 6100 9900
+F 0 "R?" V 6000 9900 50  0000 C CNN
+F 1 "1R, 0.25W, 1%" V 6200 9900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6030 9900 50  0001 C CNN
+F 3 "1206S4F100KT5E" H 6100 9900 50  0001 C CNN
+	1    6100 9900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B98595F
+P 1600 10000
+F 0 "Q?" V 1943 10000 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1852 10000 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1800 10100 50  0001 C CNN
+F 3 "~" H 1600 10000 50  0001 C CNN
+	1    1600 10000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B986104
+P 5650 10000
+F 0 "Q?" V 5993 10000 50  0000 C CNN
+F 1 "DMG1012UW-7" V 5902 10000 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5850 10100 50  0001 C CNN
+F 3 "~" H 5650 10000 50  0001 C CNN
+	1    5650 10000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B9864C9
+P 1600 7300
+F 0 "Q?" V 1943 7300 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1852 7300 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1800 7400 50  0001 C CNN
+F 3 "~" H 1600 7300 50  0001 C CNN
+	1    1600 7300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B986B8C
+P 1600 4600
+F 0 "Q?" V 1943 4600 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1852 4600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1800 4700 50  0001 C CNN
+F 3 "~" H 1600 4600 50  0001 C CNN
+	1    1600 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B987218
+P 1600 1900
+F 0 "Q?" V 1943 1900 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1852 1900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1800 2000 50  0001 C CNN
+F 3 "~" H 1600 1900 50  0001 C CNN
+	1    1600 1900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B9876EE
+P 1500 2800
+F 0 "Q?" V 1843 2800 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1752 2800 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 2900 50  0001 C CNN
+F 3 "~" H 1500 2800 50  0001 C CNN
+	1    1500 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B987B99
+P 1500 5500
+F 0 "Q?" V 1843 5500 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1752 5500 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 5600 50  0001 C CNN
+F 3 "~" H 1500 5500 50  0001 C CNN
+	1    1500 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B988213
+P 1500 8200
+F 0 "Q?" V 1843 8200 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1752 8200 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 8300 50  0001 C CNN
+F 3 "~" H 1500 8200 50  0001 C CNN
+	1    1500 8200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B98862C
+P 1500 10900
+F 0 "Q?" V 1843 10900 50  0000 C CNN
+F 1 "DMG1012UW-7" V 1752 10900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 11000 50  0001 C CNN
+F 3 "~" H 1500 10900 50  0001 C CNN
+	1    1500 10900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q?
+U 1 1 5B988A45
+P 5550 10900
+F 0 "Q?" V 5893 10900 50  0000 C CNN
+F 1 "DMG1012UW-7" V 5802 10900 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5750 11000 50  0001 C CNN
+F 3 "~" H 5550 10900 50  0001 C CNN
+	1    5550 10900
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
