@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:lamp_ceiling-cache
-LIBS:SDCM_SERVO_TOP_01_alt-cache
 EELAYER 26 0
 EELAYER END
 $Descr A3 16535 11693
@@ -125,17 +124,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R17
-U 1 1 5B8CA40F
-P 3050 2000
-F 0 "R17" V 3246 2000 50  0000 C CNN
-F 1 "100k, 1%" V 3155 2000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3050 2000 50  0001 C CNN
-F 3 "~" H 3050 2000 50  0001 C CNN
-	1    3050 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0103
 U 1 1 5B8CA677
 P 3050 1750
@@ -171,17 +159,6 @@ Wire Wire Line
 	2750 1500 2750 2000
 Wire Wire Line
 	2750 2000 2950 2000
-$Comp
-L Device:R_Small R10
-U 1 1 5B8D6D0E
-P 2550 1500
-F 0 "R10" V 2746 1500 50  0000 C CNN
-F 1 "20k, 1%" V 2655 1500 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 1500 50  0001 C CNN
-F 3 "~" H 2550 1500 50  0001 C CNN
-	1    2550 1500
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 1500 2750 1500
 Connection ~ 2750 1500
@@ -191,24 +168,13 @@ U 1 1 5B8DC2C4
 P 2550 1300
 F 0 "R9" V 2746 1300 50  0000 C CNN
 F 1 "20k, 1%" V 2655 1300 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 1300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 1300 50  0001 C CNN
 F 3 "~" H 2550 1300 50  0001 C CNN
 	1    2550 1300
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	2650 1300 2750 1300
-$Comp
-L Device:R_Small R21
-U 1 1 5B8E20D9
-P 3600 1050
-F 0 "R21" V 3796 1050 50  0000 C CNN
-F 1 "100k, 1%" V 3705 1050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3600 1050 50  0001 C CNN
-F 3 "~" H 3600 1050 50  0001 C CNN
-	1    3600 1050
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3700 1050 3750 1050
 Wire Wire Line
@@ -239,7 +205,7 @@ U 1 1 5B9146F7
 P 3700 1800
 F 0 "C1" H 3792 1846 50  0000 L CNN
 F 1 "100nF" H 3792 1755 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 3700 1800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 1800 50  0001 C CNN
 F 3 "~" H 3700 1800 50  0001 C CNN
 	1    3700 1800
 	1    0    0    -1  
@@ -500,17 +466,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R18
-U 1 1 5B9170A6
-P 3050 4700
-F 0 "R18" V 2946 4700 50  0000 C CNN
-F 1 "100k, 1%" V 2855 4700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3050 4700 50  0001 C CNN
-F 3 "~" H 3050 4700 50  0001 C CNN
-	1    3050 4700
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0113
 U 1 1 5B9170AC
 P 3050 4450
@@ -546,44 +501,11 @@ Wire Wire Line
 	2750 4200 2750 4700
 Wire Wire Line
 	2750 4700 2950 4700
-$Comp
-L Device:R_Small R12
-U 1 1 5B9170BF
-P 2550 4200
-F 0 "R12" V 2746 4200 50  0000 C CNN
-F 1 "20k, 1%" V 2655 4200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 4200 50  0001 C CNN
-F 3 "~" H 2550 4200 50  0001 C CNN
-	1    2550 4200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 4200 2750 4200
 Connection ~ 2750 4200
-$Comp
-L Device:R_Small R11
-U 1 1 5B9170C7
-P 2550 4000
-F 0 "R11" V 2746 4000 50  0000 C CNN
-F 1 "20k, 1%" V 2655 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 4000 50  0001 C CNN
-F 3 "~" H 2550 4000 50  0001 C CNN
-	1    2550 4000
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 4000 2750 4000
-$Comp
-L Device:R_Small R22
-U 1 1 5B9170CE
-P 3600 3750
-F 0 "R22" V 3796 3750 50  0000 C CNN
-F 1 "100k, 1%" V 3705 3750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3600 3750 50  0001 C CNN
-F 3 "~" H 3600 3750 50  0001 C CNN
-	1    3600 3750
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3700 3750 3750 3750
 Wire Wire Line
@@ -608,17 +530,6 @@ Wire Wire Line
 	2750 4000 2850 4000
 Wire Wire Line
 	2750 3750 3500 3750
-$Comp
-L Device:C_Small C2
-U 1 1 5B9170E1
-P 3700 4500
-F 0 "C2" H 3792 4546 50  0000 L CNN
-F 1 "100nF" H 3792 4455 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 3700 4500 50  0001 C CNN
-F 3 "~" H 3700 4500 50  0001 C CNN
-	1    3700 4500
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0116
 U 1 1 5B9170E7
@@ -838,17 +749,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 6800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R19
-U 1 1 5B919F75
-P 3050 7400
-F 0 "R19" V 2946 7400 50  0000 C CNN
-F 1 "100k, 1%" V 2855 7400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3050 7400 50  0001 C CNN
-F 3 "~" H 3050 7400 50  0001 C CNN
-	1    3050 7400
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0123
 U 1 1 5B919F7B
 P 3050 7150
@@ -884,44 +784,11 @@ Wire Wire Line
 	2750 6900 2750 7400
 Wire Wire Line
 	2750 7400 2950 7400
-$Comp
-L Device:R_Small R14
-U 1 1 5B919F8E
-P 2550 6900
-F 0 "R14" V 2746 6900 50  0000 C CNN
-F 1 "20k, 1%" V 2655 6900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 6900 50  0001 C CNN
-F 3 "~" H 2550 6900 50  0001 C CNN
-	1    2550 6900
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 6900 2750 6900
 Connection ~ 2750 6900
-$Comp
-L Device:R_Small R13
-U 1 1 5B919F96
-P 2550 6700
-F 0 "R13" V 2746 6700 50  0000 C CNN
-F 1 "20k, 1%" V 2655 6700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 6700 50  0001 C CNN
-F 3 "~" H 2550 6700 50  0001 C CNN
-	1    2550 6700
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 6700 2750 6700
-$Comp
-L Device:R_Small R23
-U 1 1 5B919F9D
-P 3600 6450
-F 0 "R23" V 3796 6450 50  0000 C CNN
-F 1 "100k, 1%" V 3705 6450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3600 6450 50  0001 C CNN
-F 3 "~" H 3600 6450 50  0001 C CNN
-	1    3600 6450
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3700 6450 3750 6450
 Wire Wire Line
@@ -946,17 +813,6 @@ Wire Wire Line
 	2750 6700 2850 6700
 Wire Wire Line
 	2750 6450 3500 6450
-$Comp
-L Device:C_Small C3
-U 1 1 5B919FB0
-P 3700 7200
-F 0 "C3" H 3792 7246 50  0000 L CNN
-F 1 "100nF" H 3792 7155 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 3700 7200 50  0001 C CNN
-F 3 "~" H 3700 7200 50  0001 C CNN
-	1    3700 7200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0126
 U 1 1 5B919FB6
@@ -1028,7 +884,7 @@ $EndComp
 Text Notes 650  6400 0    50   ~ 0
 DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
 Text GLabel 1800 7550 2    50   Input ~ 0
-LED1_PWM
+LED3_PWM
 Wire Wire Line
 	1800 7550 1600 7550
 Wire Wire Line
@@ -1172,17 +1028,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3150 9500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R20
-U 1 1 5B91A040
-P 3050 10100
-F 0 "R20" V 2946 10100 50  0000 C CNN
-F 1 "100k, 1%" V 2855 10100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3050 10100 50  0001 C CNN
-F 3 "~" H 3050 10100 50  0001 C CNN
-	1    3050 10100
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR0133
 U 1 1 5B91A046
 P 3050 9850
@@ -1218,44 +1063,11 @@ Wire Wire Line
 	2750 9600 2750 10100
 Wire Wire Line
 	2750 10100 2950 10100
-$Comp
-L Device:R_Small R16
-U 1 1 5B91A059
-P 2550 9600
-F 0 "R16" V 2746 9600 50  0000 C CNN
-F 1 "20k, 1%" V 2655 9600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 9600 50  0001 C CNN
-F 3 "~" H 2550 9600 50  0001 C CNN
-	1    2550 9600
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 9600 2750 9600
 Connection ~ 2750 9600
-$Comp
-L Device:R_Small R15
-U 1 1 5B91A061
-P 2550 9400
-F 0 "R15" V 2746 9400 50  0000 C CNN
-F 1 "20k, 1%" V 2655 9400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 2550 9400 50  0001 C CNN
-F 3 "~" H 2550 9400 50  0001 C CNN
-	1    2550 9400
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	2650 9400 2750 9400
-$Comp
-L Device:R_Small R24
-U 1 1 5B91A068
-P 3600 9150
-F 0 "R24" V 3796 9150 50  0000 C CNN
-F 1 "100k, 1%" V 3705 9150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 3600 9150 50  0001 C CNN
-F 3 "~" H 3600 9150 50  0001 C CNN
-	1    3600 9150
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	3700 9150 3750 9150
 Wire Wire Line
@@ -1280,17 +1092,6 @@ Wire Wire Line
 	2750 9400 2850 9400
 Wire Wire Line
 	2750 9150 3500 9150
-$Comp
-L Device:C_Small C4
-U 1 1 5B91A07B
-P 3700 9900
-F 0 "C4" H 3792 9946 50  0000 L CNN
-F 1 "100nF" H 3792 9855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 3700 9900 50  0001 C CNN
-F 3 "~" H 3700 9900 50  0001 C CNN
-	1    3700 9900
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0136
 U 1 1 5B91A081
@@ -1362,7 +1163,7 @@ $EndComp
 Text Notes 650  9100 0    50   ~ 0
 DMG1012UW-7 Rdson = 0.35R @ VGS = 3.3V\nP@0.45A = 0.35R * 0.45A * 0.45A = 0.07W\n###############################\nUsh @ 450mA = 450mV\nUsh @ 1mA      = 1mV
 Text GLabel 1800 10250 2    50   Input ~ 0
-LED1_PWM
+LED4_PWM
 Wire Wire Line
 	1800 10250 1600 10250
 Wire Wire Line
@@ -1515,7 +1316,7 @@ U 1 1 5B922C98
 P 7100 10100
 F 0 "R29" V 6996 10100 50  0000 C CNN
 F 1 "100k, 1%" V 6905 10100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 7100 10100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7100 10100 50  0001 C CNN
 F 3 "~" H 7100 10100 50  0001 C CNN
 	1    7100 10100
 	0    -1   -1   0   
@@ -1556,44 +1357,11 @@ Wire Wire Line
 	6800 9600 6800 10100
 Wire Wire Line
 	6800 10100 7000 10100
-$Comp
-L Device:R_Small R28
-U 1 1 5B922CB1
-P 6600 9600
-F 0 "R28" V 6796 9600 50  0000 C CNN
-F 1 "20k, 1%" V 6705 9600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 6600 9600 50  0001 C CNN
-F 3 "~" H 6600 9600 50  0001 C CNN
-	1    6600 9600
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6700 9600 6800 9600
 Connection ~ 6800 9600
-$Comp
-L Device:R_Small R27
-U 1 1 5B922CB9
-P 6600 9400
-F 0 "R27" V 6796 9400 50  0000 C CNN
-F 1 "20k, 1%" V 6705 9400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 6600 9400 50  0001 C CNN
-F 3 "~" H 6600 9400 50  0001 C CNN
-	1    6600 9400
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6700 9400 6800 9400
-$Comp
-L Device:R_Small R31
-U 1 1 5B922CC0
-P 7650 9150
-F 0 "R31" V 7846 9150 50  0000 C CNN
-F 1 "100k, 1%" V 7755 9150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603" H 7650 9150 50  0001 C CNN
-F 3 "~" H 7650 9150 50  0001 C CNN
-	1    7650 9150
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7750 9150 7800 9150
 Wire Wire Line
@@ -1618,17 +1386,6 @@ Wire Wire Line
 	6800 9400 6900 9400
 Wire Wire Line
 	6800 9150 7550 9150
-$Comp
-L Device:C_Small C11
-U 1 1 5B922CD3
-P 7750 9900
-F 0 "C11" H 7842 9946 50  0000 L CNN
-F 1 "100nF" H 7842 9855 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603" H 7750 9900 50  0001 C CNN
-F 3 "~" H 7750 9900 50  0001 C CNN
-	1    7750 9900
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0146
 U 1 1 5B922CD9
@@ -2703,4 +2460,246 @@ $EndComp
 Wire Wire Line
 	8250 2600 8250 2700
 Connection ~ 8250 2700
+$Comp
+L Device:R_Small R10
+U 1 1 5BA2E7E1
+P 2550 1500
+F 0 "R10" V 2746 1500 50  0000 C CNN
+F 1 "20k, 1%" V 2655 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 1500 50  0001 C CNN
+F 3 "~" H 2550 1500 50  0001 C CNN
+	1    2550 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R11
+U 1 1 5BA2E8AF
+P 2550 4000
+F 0 "R11" V 2746 4000 50  0000 C CNN
+F 1 "20k, 1%" V 2655 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 4000 50  0001 C CNN
+F 3 "~" H 2550 4000 50  0001 C CNN
+	1    2550 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R12
+U 1 1 5BA2EEA3
+P 2550 4200
+F 0 "R12" V 2746 4200 50  0000 C CNN
+F 1 "20k, 1%" V 2655 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 4200 50  0001 C CNN
+F 3 "~" H 2550 4200 50  0001 C CNN
+	1    2550 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 5BA2EF6F
+P 2550 6700
+F 0 "R13" V 2746 6700 50  0000 C CNN
+F 1 "20k, 1%" V 2655 6700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 6700 50  0001 C CNN
+F 3 "~" H 2550 6700 50  0001 C CNN
+	1    2550 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R14
+U 1 1 5BA2F781
+P 2550 6900
+F 0 "R14" V 2746 6900 50  0000 C CNN
+F 1 "20k, 1%" V 2655 6900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 6900 50  0001 C CNN
+F 3 "~" H 2550 6900 50  0001 C CNN
+	1    2550 6900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R15
+U 1 1 5BA2F849
+P 2550 9400
+F 0 "R15" V 2746 9400 50  0000 C CNN
+F 1 "20k, 1%" V 2655 9400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 9400 50  0001 C CNN
+F 3 "~" H 2550 9400 50  0001 C CNN
+	1    2550 9400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 5BA3008F
+P 2550 9600
+F 0 "R16" V 2746 9600 50  0000 C CNN
+F 1 "20k, 1%" V 2655 9600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 9600 50  0001 C CNN
+F 3 "~" H 2550 9600 50  0001 C CNN
+	1    2550 9600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R27
+U 1 1 5BA3015B
+P 6600 9400
+F 0 "R27" V 6796 9400 50  0000 C CNN
+F 1 "20k, 1%" V 6705 9400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6600 9400 50  0001 C CNN
+F 3 "~" H 6600 9400 50  0001 C CNN
+	1    6600 9400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R28
+U 1 1 5BA306E7
+P 6600 9600
+F 0 "R28" V 6796 9600 50  0000 C CNN
+F 1 "20k, 1%" V 6705 9600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6600 9600 50  0001 C CNN
+F 3 "~" H 6600 9600 50  0001 C CNN
+	1    6600 9600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R31
+U 1 1 5BA33851
+P 7650 9150
+F 0 "R31" V 7546 9150 50  0000 C CNN
+F 1 "100k, 1%" V 7455 9150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7650 9150 50  0001 C CNN
+F 3 "~" H 7650 9150 50  0001 C CNN
+	1    7650 9150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R24
+U 1 1 5BA3392B
+P 3600 9150
+F 0 "R24" V 3496 9150 50  0000 C CNN
+F 1 "100k, 1%" V 3405 9150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3600 9150 50  0001 C CNN
+F 3 "~" H 3600 9150 50  0001 C CNN
+	1    3600 9150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R20
+U 1 1 5BA33BF2
+P 3050 10100
+F 0 "R20" V 2946 10100 50  0000 C CNN
+F 1 "100k, 1%" V 2855 10100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3050 10100 50  0001 C CNN
+F 3 "~" H 3050 10100 50  0001 C CNN
+	1    3050 10100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R19
+U 1 1 5BA33CD6
+P 3050 7400
+F 0 "R19" V 2946 7400 50  0000 C CNN
+F 1 "100k, 1%" V 2855 7400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3050 7400 50  0001 C CNN
+F 3 "~" H 3050 7400 50  0001 C CNN
+	1    3050 7400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R23
+U 1 1 5BA33FAF
+P 3600 6450
+F 0 "R23" V 3496 6450 50  0000 C CNN
+F 1 "100k, 1%" V 3405 6450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3600 6450 50  0001 C CNN
+F 3 "~" H 3600 6450 50  0001 C CNN
+	1    3600 6450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 5BA34269
+P 3050 4700
+F 0 "R18" V 2946 4700 50  0000 C CNN
+F 1 "100k, 1%" V 2855 4700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3050 4700 50  0001 C CNN
+F 3 "~" H 3050 4700 50  0001 C CNN
+	1    3050 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R22
+U 1 1 5BA345F8
+P 3600 3750
+F 0 "R22" V 3496 3750 50  0000 C CNN
+F 1 "100k, 1%" V 3405 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3600 3750 50  0001 C CNN
+F 3 "~" H 3600 3750 50  0001 C CNN
+	1    3600 3750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R17
+U 1 1 5BA346FA
+P 3050 2000
+F 0 "R17" V 2946 2000 50  0000 C CNN
+F 1 "100k, 1%" V 2855 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3050 2000 50  0001 C CNN
+F 3 "~" H 3050 2000 50  0001 C CNN
+	1    3050 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R21
+U 1 1 5BA34AA3
+P 3600 1050
+F 0 "R21" V 3496 1050 50  0000 C CNN
+F 1 "100k, 1%" V 3405 1050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3600 1050 50  0001 C CNN
+F 3 "~" H 3600 1050 50  0001 C CNN
+	1    3600 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5BA35959
+P 3700 4500
+F 0 "C2" H 3792 4546 50  0000 L CNN
+F 1 "100nF" H 3792 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 4500 50  0001 C CNN
+F 3 "~" H 3700 4500 50  0001 C CNN
+	1    3700 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5BA369C8
+P 3700 7200
+F 0 "C3" H 3792 7246 50  0000 L CNN
+F 1 "100nF" H 3792 7155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 7200 50  0001 C CNN
+F 3 "~" H 3700 7200 50  0001 C CNN
+	1    3700 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5BA36BC4
+P 3700 9900
+F 0 "C4" H 3792 9946 50  0000 L CNN
+F 1 "100nF" H 3792 9855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3700 9900 50  0001 C CNN
+F 3 "~" H 3700 9900 50  0001 C CNN
+	1    3700 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5BA37098
+P 7750 9900
+F 0 "C11" H 7842 9946 50  0000 L CNN
+F 1 "100nF" H 7842 9855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7750 9900 50  0001 C CNN
+F 3 "~" H 7750 9900 50  0001 C CNN
+	1    7750 9900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
