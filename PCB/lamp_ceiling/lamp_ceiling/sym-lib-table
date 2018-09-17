@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name Connector_Generic1)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/Connector_Generic.lib)(options "")(descr ""))
+  (lib (name +3V3_MC)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/+3V3_MC.lib)(options "")(descr ""))
+  (lib (name BLDC-control-cache)(type Legacy)(uri "C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/BLDC control-cache.lib")(options "")(descr ""))
+  (lib (name Device1)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/Device.lib)(options "")(descr ""))
+  (lib (name RFM_Module_V2-cache)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/RFM_Module_V2-cache.lib)(options "")(descr ""))
+  (lib (name Regulator_Switching1)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/Regulator_Switching.lib)(options "")(descr ""))
+  (lib (name nc7sz66)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/nc7sz66.lib)(options "")(descr ""))
+  (lib (name ferrite_bead)(type Legacy)(uri C:/Users/tymoteusz.lipinski/Documents/WROOB/pcb-01/CAD/Common/Symbols/ferrite_bead.lib)(options "")(descr ""))
+  (lib (name aoz1284)(type Legacy)(uri ${KIPRJMOD}/Symbols/aoz1284.lib)(options "")(descr ""))
+)
